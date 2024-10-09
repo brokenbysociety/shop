@@ -11,8 +11,8 @@ function App() {
   return (
 <>
     <header>
-      <a href="/">Главная</a>
-      <a href="/products">Товары</a>
+      <Link to="/">Главная</Link>
+      <Link to="/products">Товары</Link>
     </header>
     <Routes>
       <Route path="/" element={<Main />}/>
