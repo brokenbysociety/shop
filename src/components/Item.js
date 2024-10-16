@@ -9,6 +9,8 @@ export class Item extends Component {
         <p>{this.props.item.desc}</p>
         <b>${this.props.item.price}</b>
         <div className='add-to-cart'> +</div>
+        <input type="checkbox" />
+        <div class="popup"></div>
       </div>
     )
   }

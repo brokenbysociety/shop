@@ -10,14 +10,19 @@ import Items from "./components/Items"
 function App() {
   return (
 <>
-    <header>
-      <Link to="/">Главная</Link>
-      <Link to="/products">Товары</Link>
+    <div className="wrapper">
+    <header className="header">
+     
+      <div className="nav">
+      <Link to="/"> <span className="logo"><img src="/logo.png"></img></span></Link>
+      <Link to="/products">Продукты</Link>
+      </div>
     </header>
     <Routes>
-      <Route path="/" element={<Main />}/>
       <Route path="/Products" element={<Products />}/>
+      <Route path="/" element={<Main />}/>
     </Routes>
+    </div>
 </>
   );
 }

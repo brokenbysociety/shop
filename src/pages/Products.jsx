@@ -4,7 +4,6 @@ const Products = () => {
     return(
         <>
             <Items />
-            <Footer />
         </>
     );
 }
