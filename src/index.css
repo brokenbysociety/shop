@@ -5,16 +5,102 @@
     padding: 0;
 }
 
+
+
 body{
     background-color: white;
     color: #222;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 300;
+    @media (max-width:1300px) {
+
+        
+        Footer {
+            width: 1300px;
+        }
+
+    
+
+
+        main {
+            width: 70%;
+            margin-left: 10%;
+        }
+
+        main .item {
+            width: 40%;
+        }
+
+        .nav {
+            margin-left: 8%;
+        }
+    }
+
+    @media (max-width:1040px) {
+
+        main {
+            width: 50%;
+            margin-left: 10%;
+        }
+
+        main p,b {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-left: 10%;
+            padding-top: 10%;
+        }
+
+        main .item {
+            width: 40%;
+        }
+
+        .nav {
+            margin-left: 8%;
+        }
+    }
+
+    @media (max-width:780px) {
+
+        
+
+        main {
+            width: 50%;
+            margin-left: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        main p,b {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-left: 10%;
+            padding-top: 10%;
+        }
+
+        main .item {
+            width: 60%;
+        }
+
+        .nav {
+            margin-left: 18%;
+        }
+
+        Footer {
+            
+            display: flex;
+            right: 10%;
+
+        }
+
+    }
 }
 
-.logo {
-
-}
 
 .wrapper{
     width: 1280px;
@@ -34,12 +120,29 @@ header a {
     
 }
 
-header img {
+.main_header {
+    font-weight: 600;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 5%;
-    width: npm70px;
-    height: 70px;
 }
+
+.main_picture {
+    align-items: center;
+    margin-bottom: 5%;
+    width: 1200px;
+    height: 720px;
+}
+
+.main_text {
+    width: 1200px;
+    font-weight: 600;
+    font-size: 32px;
+    color: #505050;
+}
+
 
 header a{
     display: inline;
@@ -73,6 +176,7 @@ main {
 main .item {
     width: 30%;
     margin-bottom: 50px;
+    height: max-content;
     background: #e2e2e2;
     overflow: hidden;
     position: relative;
@@ -95,7 +199,7 @@ main p,
 main b {
     margin: 10px 20px;
     color: #333;
-    display: none;
+    transition: ease 500ms;
 }
 
 main b {
@@ -107,15 +211,13 @@ main .add-to-cart {
     right: 20px;
     bottom: 20px;
     background: #ca5252;
-    width: 35px;
+    width: 45px;
     height: 35px;
     text-align: center;
-    line-height: 35px;
     color: white;
-    border-radius: 50%;
     cursor: pointer;
     font-weight: 600;
-    transition: transform 500ms ease;
+    transition: ease 500ms;
 }
 
 main .add-to-cart:hover {
@@ -126,10 +228,11 @@ main .add-to-cart:hover {
 footer{
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: end;
 }
 
 .popup{
-    display:none;
     margin-left: 50%;
     margin-top:50%;
     transform:translate(-50%,-50%);
@@ -138,9 +241,14 @@ footer{
     background-color:#ccc;
     width: 300px;
     height: 190px; 
+    transition: ease 50ms;
+    border-radius: 20px;
 }
-input[type="checkbox"]:checked ~ .popup{
-    display:block;
+
+.hidden {
+    display: none;
 }
+
+
 
 
